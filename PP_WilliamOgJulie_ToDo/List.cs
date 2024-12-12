@@ -16,10 +16,13 @@ namespace PP_WilliamOgJulie_ToDo
 
         public void ShowAllTasks()
         {
+            Console.WriteLine("To do list:");
             foreach (var task in toDoList)
             {
                 Console.WriteLine(task.Name);
             }
+            Console.WriteLine();
+            Thread.Sleep(700);
         }
 
         public void AddTask()
@@ -31,6 +34,8 @@ namespace PP_WilliamOgJulie_ToDo
             Console.Write("Do date: ");
             var inputDate = Console.ReadLine();
             toDoList.Add(new Task(inputName, inputDescrition, inputDate));
+            Console.WriteLine();
+            Thread.Sleep(700);
         }
 
         public void DeleteTask()
