@@ -17,12 +17,17 @@ namespace PP_WilliamOgJulie_ToDo
         public void ShowAllTasks()
         {
             Console.WriteLine("To do list:");
+            int taskNumber = 1;
             foreach (var task in toDoList)
             {
-                Console.WriteLine(task.Name);
+                Console.WriteLine($"{taskNumber++}. {task.Name}");
             }
             Console.WriteLine();
             Thread.Sleep(700);
+            var input = Convert.ToInt32(Console.ReadLine());
+
+
+
         }
 
         public void AddTask()
@@ -39,6 +44,11 @@ namespace PP_WilliamOgJulie_ToDo
         }
 
         public void DeleteTask()
+        {
+
+        }
+
+        public void ShowTaskInfo()
         {
 
         }
