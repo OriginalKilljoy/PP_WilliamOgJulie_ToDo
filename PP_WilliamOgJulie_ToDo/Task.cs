@@ -9,14 +9,14 @@ namespace PP_WilliamOgJulie_ToDo
     internal class Task
     {
         public string Name;
+        public string Description;
         public string DoDate;
-        public bool Done = false;
 
-        public Task(string name, string doDate, bool done)
+        public Task(string name, string description, string doDate)
         {
             Name = name;
+            Description = description;
             DoDate = doDate;
-            Done = done;
         }
     }
 
