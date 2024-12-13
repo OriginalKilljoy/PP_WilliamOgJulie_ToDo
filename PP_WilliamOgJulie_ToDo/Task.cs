@@ -10,13 +10,13 @@ namespace PP_WilliamOgJulie_ToDo
     {
         public string Name;
         public string Description;
-        public string DoDate;
+        public string Date;
 
-        public Task(string name, string description, string doDate)
+        public Task(string name, string description, string Date)
         {
             Name = name;
             Description = description;
-            DoDate = doDate;
+            Date = Date;
         }
     }
 

@@ -56,7 +56,7 @@ namespace PP_WilliamOgJulie_ToDo
             Console.WriteLine(
                 $"Task: {toDoList[input].Name}\n" +
                 $"Info: {toDoList[input].Description}\n" +
-                $"Date: {toDoList[input].DoDate}\n");
+                $"Date: {toDoList[input].Date}\n");
             Console.Write("Press ENTER to continue: ");
             Console.ReadKey();
         }
