@@ -12,11 +12,11 @@ namespace PP_WilliamOgJulie_ToDo
         public string Description;
         public string Date;
 
-        public Task(string name, string description, string Date)
+        public Task(string name, string description, string date)
         {
             Name = name;
             Description = description;
-            Date = Date;
+            Date = date;
         }
     }
 

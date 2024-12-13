@@ -20,11 +20,9 @@ namespace PP_WilliamOgJulie_ToDo
             ShowTaskNames();
             Console.WriteLine();
             Thread.Sleep(700);
-            Console.WriteLine("Enter tasknumber to see info: ");
+            Console.Write("Enter tasknumber to see info: ");
             var input = Convert.ToInt32(Console.ReadLine()) - 1;
             ShowTaskInfo(input);
-
-
         }
 
         public void AddTask()
@@ -36,14 +34,12 @@ namespace PP_WilliamOgJulie_ToDo
             Console.Write("Do date: ");
             var inputDate = Console.ReadLine();
             toDoList.Add(new Task(inputName, inputDescrition, inputDate));
-            Console.WriteLine();
-            Thread.Sleep(700);
         }
 
         public void DeleteTask()
         {
             ShowTaskNames();
-            Console.WriteLine("Enter tasknumber to remove it: ");
+            Console.Write("Enter tasknumber to remove it: ");
             var input = Convert.ToInt32(Console.ReadLine()) - 1;
             Console.WriteLine($"You removed {toDoList[input].Name}");
             toDoList.RemoveAt(input);
