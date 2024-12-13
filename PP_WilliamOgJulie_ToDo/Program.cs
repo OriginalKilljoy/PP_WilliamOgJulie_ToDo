@@ -6,6 +6,7 @@ bool isChoosing = true;
 
 while (isChoosing)
 {
+    Console.Clear();
     Console.WriteLine("[1]See all tasks" +
                       "\n[2]Add task" +
                       "\n[3]Delete task");

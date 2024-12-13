@@ -17,15 +17,12 @@ namespace PP_WilliamOgJulie_ToDo
         public void ShowAllTasks()
         {
             Console.WriteLine("To do list:");
-            int taskNumber = 1;
-            foreach (var task in toDoList)
-            {
-                Console.WriteLine($"{taskNumber++}. {task.Name}");
-            }
+            ShowTaskNames();
             Console.WriteLine();
             Thread.Sleep(700);
-            var input = Convert.ToInt32(Console.ReadLine());
-
+            Console.WriteLine("Enter tasknumber to see info: ");
+            var input = Convert.ToInt32(Console.ReadLine()) - 1;
+            ShowTaskInfo(input);
 
 
         }
@@ -45,12 +42,32 @@ namespace PP_WilliamOgJulie_ToDo
 
         public void DeleteTask()
         {
-
+            ShowTaskNames();
+            Console.WriteLine("Enter tasknumber to remove it: ");
+            var input = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine($"You removed {toDoList[input].Name}");
+            toDoList.RemoveAt(input);
+            Console.ReadKey();
         }
 
-        public void ShowTaskInfo()
+        public void ShowTaskInfo(int input)
         {
+            Console.Clear();
+            Console.WriteLine(
+                $"Task: {toDoList[input].Name}\n" +
+                $"Info: {toDoList[input].Description}\n" +
+                $"Date: {toDoList[input].DoDate}\n");
+            Console.Write("Press ENTER to continue: ");
+            Console.ReadKey();
+        }
 
+        public void ShowTaskNames()
+        {
+            int taskNumber = 1;
+            foreach (var task in toDoList)
+            {
+                Console.WriteLine($"[{taskNumber++}] {task.Name}");
+            }
         }
 
     }
